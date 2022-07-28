@@ -534,7 +534,7 @@ class WordSet(object):
         """
         wordgen_fn = self.get_wordimage_generator()
         images = [wordgen_fn(word) for word in words]
-        import pdb;pdb.set_trace()
+
         if do_augmentation:
             aug_fn = self.get_imgaug_pipeline()
             images = [aug_fn(image=np.array(image, dtype=np.uint8)) for image in images]
